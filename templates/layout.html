@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<title>SEMDEX | Yet Another Semantic Web Search Engine</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
+<div class=page>
+    <a href="{{ url_for('index')}}"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" /></a>
+    <form method="POST" action="{{ url_for('search') }}">
+        <input type="text" name="query" placeholder="Enter search term" />
+        <input type="submit" value="Search" />
+    </form>
+
+    {% block body %}{% endblock %}
+</div>

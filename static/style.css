@@ -1,0 +1,46 @@
+.page {
+    width: 960px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.page img {
+    display: block;
+    width: 350px;
+    margin: 0 auto;
+}
+
+.page input[type="text"] {
+    width: 360px;
+    margin: 0 auto;
+    padding: 10px;
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.page input[type="submit"] {
+    width: 180px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.page .count {
+    color: #00adff;
+}
+
+.page .resources .resource {
+    margin-bottom: 40px;
+}
+
+.page .resources .resource .label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.page .resources .resource p span {
+    font-weight: bold;
+    color: #00adff;
+}

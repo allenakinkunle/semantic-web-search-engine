@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<p class="count">{{ results|length }} resources matched</p>
+{% for result in results %}
+
+    <ul class="resources">
+        <li class="resource">
+            <p class="label">{{result['_source']['label']}}</p>
+            <a href="{{ url_for('get_result', uri=result['_source']['uri']) }}">{{ result['_source']['uri'] }}</a>
+            <p>Mentioned by <span>{{ result['_source']['mentioned_by'] | length }}</span> other resources</p>
+        </li>
+    </ul>
+{% endfor %}
+
+{% endblock %}

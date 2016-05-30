@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h1>{{ results[0]['_source']['label'] }}</h1>
+
+<p>This resource was mentioned by the following resources</p>
+
+{% for link in results[0]['_source']['mentioned_by'] %}
+    <ul>
+        <li><a href="{{ link }}">{{link}}</a></li>
+    </ul>
+{% endfor %}
+
+{% endblock %}
