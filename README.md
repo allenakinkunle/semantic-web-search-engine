@@ -9,11 +9,42 @@ Given this increase in the amount of RDF datasets on the web, it is imperative t
 
 This repo contains code for a linked data person search engine that crawls the Semantic Web, finding resources of type ’Person’, indexing these found resources. It indexes these found resources on resource URIs, human-readable labels of the resources and in line with linked data approach of linking semantic data, it keeps a list of resources that are linked to the found Person resource. It also provides a web-based user interface through which human users can find these resources.
 
+# Getting Started
+1. Clone the repository and change directory
+```bash
+git clone https://github.com/allenakinkunle/semantic-web-search-engine
+cd semantic-web-search-engine
+```
+2. Create an isolated Python environment in the cloned directory to install the project dependencies
+```bash
+virtualenv env
+source env/bin/activate
+```
+The project dependencies are:
+* [Python Elasticsearch](https://elasticsearch-py.readthedocs.io/en/master/)
+* [SPARQLWrapper: A wrapper for a remote SPARQL endpoint](https://github.com/RDFLib/sparqlwrapper)
+3. Install the dependencies
+```bash
+pip install elasticsearch sparqlwrapper
+```
+4. Make sure [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/_installation.html) is installed and running on your machine. Elasticsearch runs on port 9200 by default. Change the settings in the `config.json` file provided if you run it on a different host and port number.
+5. Run the Crawler component of the code to crawl and index the found resources. (Make sure Elasticsearch is installed and running)
+```bash
+cd Crawler
+python main.py
+```
+Leave the crawler to run for a couple of hours to build the Elasticsearch index.
+6. Run the web search interface
+```bash
+cd Interface
+export FLASK_APP=web.py
+flask run
+```
+Point your browser to http://127.0.0.1:5000/ to see the web interface.
+
 # References
-<a name="references">
 [1] Hogan, A., Harth, A., Umbrich, J., Kinsella, S., Polleres, A. Decker, S. 2011, ”Searching and browsing Linked Data with SWSE: The Semantic Web Search Engine”, Web Semantics: Science, Services and Agents on the World Wide Web, vol. 9, no. 4, pp. 365-401.
 
 [2] Tummarello, G., Delbru, R. Oren, E. 2008, ”Sindice.com: Weaving the Open Linked Data” in Springer Berlin Heidelberg, Berlin, Heidelberg, pp. 552-565.
 
 [3] Delbru, R., Campinas, S. Tummarello, G. 2012, ”Searching web data: An entity retrieval and high-performance indexing model”, Web Semantics: Science, Services and Agents on the World Wide Web, vol. 10, pp. 33-58.
-</a>
