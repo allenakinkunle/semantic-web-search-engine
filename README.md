@@ -11,40 +11,40 @@ This repo contains code for a linked data person search engine that crawls the S
 
 # Getting Started
 1. Clone the repository and change directory
-```bash
-git clone https://github.com/allenakinkunle/semantic-web-search-engine
-cd semantic-web-search-engine
-```
+    ```bash
+    git clone https://github.com/allenakinkunle/semantic-web-search-engine
+    cd semantic-web-search-engine
+    ```
 
 2. Create an isolated Python environment in the cloned directory to install the project dependencies
-```bash
-virtualenv env
-source env/bin/activate
-```
-The project dependencies are:
-* [Python Elasticsearch](https://elasticsearch-py.readthedocs.io/en/master/)
-* [SPARQLWrapper: A wrapper for a remote SPARQL endpoint](https://github.com/RDFLib/sparqlwrapper)
+    ```bash
+    virtualenv env
+    source env/bin/activate
+    ```
+    The project dependencies are:
+    * [Python Elasticsearch](https://elasticsearch-py.readthedocs.io/en/master/)
+    * [SPARQLWrapper: A wrapper for a remote SPARQL endpoint](https://github.com/RDFLib/sparqlwrapper)
 
 3. Install the dependencies
-```bash
-pip install elasticsearch sparqlwrapper
-```
+    ```bash
+    pip install elasticsearch sparqlwrapper
+    ```
 
 4. Make sure [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/_installation.html) is installed and running on your machine. Elasticsearch runs on port 9200 by default. Change the settings in the `config.json` file provided if you run it on a different host and port number.
 
 5. Run the Crawler component of the code to crawl and index the found resources. (Make sure Elasticsearch is installed and running)
-```bash
-cd Crawler
-python main.py
-```
+    ```bash
+    cd Crawler
+    python main.py
+    ```
 Leave the crawler to run for a couple of hours to build the Elasticsearch index.
 
 6. Run the web search interface
-```bash
-cd Interface
-export FLASK_APP=web.py
-flask run
-```
+    ```bash
+    cd Interface
+    export FLASK_APP=web.py
+    flask run
+    ```
 Point your browser to http://127.0.0.1:5000/ to see the web interface.
 
 # References
