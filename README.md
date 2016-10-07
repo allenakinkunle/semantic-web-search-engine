@@ -10,3 +10,6 @@ Given this increase in the amount of RDF datasets on the web, it is imperative t
 This paper introduces SEMDEX, a linked data person search engine that crawls the Semantic Web, finding resources of type ’Person’, indexing these found resources. It indexes these found resources on resource URIs, human-readable labels of the resources and in line with linked data approach of linking semantic data, it keeps a list of resources that are linked to the found Person resource. It also provides a web-based user interface through which human users can find these resources.
 
 # References
+[1] Hogan, A., Harth, A., Umbrich, J., Kinsella, S., Polleres, A. Decker, S. 2011, ”Searching and browsing Linked Data with SWSE: The Semantic Web Search Engine”, Web Semantics: Science, Services and Agents on the World Wide Web, vol. 9, no. 4, pp. 365-401.
+[2] Tummarello, G., Delbru, R. Oren, E. 2008, ”Sindice.com: Weaving the Open Linked Data” in Springer Berlin Heidelberg, Berlin, Heidelberg, pp. 552-565.
+[3] Delbru, R., Campinas, S. Tummarello, G. 2012, ”Searching web data: An entity retrieval and high-performance indexing model”, Web Semantics: Science, Services and Agents on the World Wide Web, vol. 10, pp. 33-58.
