@@ -24,10 +24,11 @@ This repo contains code for a linked data person search engine that crawls the S
     The project dependencies are:
     * [Python Elasticsearch](https://elasticsearch-py.readthedocs.io/en/master/)
     * [SPARQLWrapper: A wrapper for a remote SPARQL endpoint](https://github.com/RDFLib/sparqlwrapper)
+    * [Flask](http://flask.pocoo.org)
 
 3. Install the dependencies
     ```bash
-    pip install elasticsearch sparqlwrapper
+    pip install elasticsearch sparqlwrapper Flask
     ```
 
 4. Make sure [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/_installation.html) is installed and running on your machine. Elasticsearch runs on port 9200 by default. Change the settings in the `config.json` file provided if you run it on a different host and port number.
